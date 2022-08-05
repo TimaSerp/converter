@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #fafafa;"
+            xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ru.serpov.converter.controller.Controller">
+    <children>
+        <AnchorPane prefHeight="80.0" prefWidth="600.0"
+                    style="-fx-background-color: #330000;">
+            <children>
+                <Label layoutX="123.0" layoutY="15.0" text="To PDF Converter" textFill="WHITE">
+                    <font>
+                        <Font name="Modern No. 20" size="45.0"/>
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <Label layoutX="14.0" layoutY="102.0" prefHeight="30.0" prefWidth="571.0"
+               text="Выберите файл или несколько файлов формата .jpeg, .jpg, .png, .gif для конвертации в pdf">
+            <font>
+                <Font name="Modern No. 20" size="14.0"/>
+            </font>
+        </Label>
+        <Button layoutX="227.0" layoutY="150.0" mnemonicParsing="false"
+                style="-fx-background-color: #fafafa; -fx-border-color: #330000; -fx-border-radius: 5;"
+                text="Выбрать файлы. . ." textFill="#330000" fx:id="chooseFilesButton">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Button>
+        <Label layoutX="199.0" layoutY="200.0" prefHeight="30.0" prefWidth="202.0" text="Укажите размер изображения">
+            <font>
+                <Font name="Modern No. 20" size="14.0"/>
+            </font>
+        </Label>
+        <ChoiceBox layoutX="271.0" layoutY="243.0"
+                   style="-fx-background-color: #fafafa; -fx-border-color: #330000; -fx-border-radius: 5;"
+                   fx:id="choosePageSizeChoiceBox">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="A1"/>
+                    <String fx:value="A2"/>
+                    <String fx:value="A3"/>
+                    <String fx:value="A4"/>
+                    <String fx:value="A5"/>
+                    <String fx:value="A6"/>
+                    <String fx:value="A7"/>
+                    <String fx:value="A8"/>
+                    <String fx:value="A9"/>
+                    <String fx:value="A10"/>
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+        <Button layoutX="202.0" layoutY="332.0" mnemonicParsing="false"
+                style="-fx-background-color: #fafafa; -fx-border-color: #330000; -fx-border-radius: 5;"
+                text="Конвертировать" textFill="#330000" fx:id="convertButton">
+            <font>
+                <Font name="Modern No. 20" size="22.0"/>
+            </font>
+        </Button>
+    </children>
+</AnchorPane>
